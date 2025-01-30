@@ -5,10 +5,12 @@ import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
-//0xacfa310ca524ca956921705b2e9d639b52f56661
+//0x810d70731915b13ee544fe205b33d7fe18aa4568
 
 contract LoyaltyPointsERC1155 is ERC1155, Ownable {
     using Strings for uint256;
+    event LoyaltyPointsSaved(address indexed user, uint256 amount, string purchaseType);
+
 
     struct LoyaltyData {
         uint256 balance;
@@ -43,6 +45,8 @@ contract LoyaltyPointsERC1155 is ERC1155, Ownable {
         purchaseTypeByTokenId[3] = "Hospitality";
     }
 
+    //Fires TransferSingle event (mint)
+    //Fires LoyaltyPointsSaved event for the points added
     function saveLoyaltyPoints(address user, uint256 amount, string memory typeOfPurchases) public onlyOwner {
         require (contains(typeOfPurchases), "This type of purchase is not allowed");
             LoyaltyData storage data = usersWallet[user][typeOfPurchases];
@@ -56,11 +60,14 @@ contract LoyaltyPointsERC1155 is ERC1155, Ownable {
                 if (tokenId > 0) {
                     _mint(user, tokenId, numberOfToken, "");
                     data.balance -= numberOfToken * 100;
+                    emit LoyaltyPointsSaved(user, amount, typeOfPurchases);
                 }
             }
         
     }
 
+    //To add a Type of purchases and create a new kind of token linked to it
+    //Reminder: The JSON file defining the URI of this new token needs to be provided in the URL (see ERC155 constructor parameter)
     function setTypeOfPurchases(string memory typeOfPurchases) public onlyOwner {
         require (!contains(typeOfPurchases), "This type of purchase already exists");
 
@@ -70,13 +77,21 @@ contract LoyaltyPointsERC1155 is ERC1155, Ownable {
         nextTokenId++;
     }
 
+    //Check if this type of purchase is suported
     function contains(string memory typeOfPurchases) public view returns (bool){
         return tokenIdByPurchaseType[typeOfPurchases] != 0;
     }
 
+    //Identifying the type of purchase a token is specific too.
     function getPurchaseTypeByTokenId(uint256 tokenId) public view returns (string memory) {
         require(bytes(purchaseTypeByTokenId[tokenId]).length > 0, "Token ID does not exist");
         return purchaseTypeByTokenId[tokenId];
+    }
+
+    //Fire TransferSingle event
+    function transferToken(address from, uint256 tokenId, uint256 amount) public {
+        // require (isApprovedForAll(from,address(this)), "this address did not approve the contract to manage its tokens");
+        _safeTransferFrom(from, msg.sender, tokenId, amount, "");
     }
     
 }
