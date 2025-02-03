@@ -4,8 +4,6 @@ pragma solidity ^0.8.0;
 import "./LoyaltyPointsERC1155.sol";
 import "@openzeppelin/contracts/token/ERC1155/utils/ERC1155Holder.sol";
 
-//0x45842984bb2deb691766fd38ad9e3d2fb3d31259
-
 contract TokenVerifier is ERC1155Holder, Ownable {
     LoyaltyPointsERC1155 private loyaltyContract;
 
