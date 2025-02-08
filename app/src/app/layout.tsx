@@ -1,4 +1,5 @@
 import "./globals.css";
+import React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { headers } from "next/headers";
@@ -7,6 +8,7 @@ import { cookieToInitialState } from "wagmi";
 
 import { getConfig } from "../wagmi";
 import { Providers } from "./providers";
+import { Toaster } from "@/components/shadcn/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,8 +24,11 @@ export default async function RootLayout(props: { children: ReactNode }) {
   );
   return (
     <html lang="en">
-      <body className={`${inter.className} container mx-auto`}>
-        <Providers initialState={initialState}>{props.children}</Providers>
+      <body className={`${inter.className}`}>
+        <Providers initialState={initialState}>
+          <div>{props.children}</div>
+          <Toaster />
+        </Providers>
       </body>
     </html>
   );

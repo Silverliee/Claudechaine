@@ -1,4 +1,7 @@
 import { Product } from "@/types/Products";
+import React from "react";
+
+import PayButtonComponent from "./base/payButton";
 import {
   Card,
   CardContent,
@@ -6,8 +9,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "./ui/card";
-import { Button } from "./ui/button";
+} from "./shadcn/card";
 
 const ProductCard = ({
   product,
@@ -31,16 +33,11 @@ const ProductCard = ({
           {onAddToCart && (
             <div>
               <a href="#">
-                <Button variant={"destructive"} onClick={onAddToCart}>
+                {/* <Button variant={"destructive"} onClick={onAddToCart}>
                   Ajouter au panier
-                </Button>
+                </Button> */}
+                <PayButtonComponent product={product} />
               </a>
-              <button
-                className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700"
-                onClick={onAddToCart}
-              >
-                Ajouter au panier
-              </button>
             </div>
           )}
         </CardFooter>

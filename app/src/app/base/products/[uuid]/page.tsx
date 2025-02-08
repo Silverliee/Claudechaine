@@ -1,5 +1,5 @@
 "use client";
-
+import React from "react";
 import ProductCard from "@/components/product";
 import useProductByUUID from "@/hooks/useProductById";
 import { use } from "react";
