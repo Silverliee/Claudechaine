@@ -7,8 +7,15 @@ import {
   CardHeader,
   CardTitle,
 } from "./ui/card";
+import { Button } from "./ui/button";
 
-const ProductCard = ({ product }: { product: Product }) => {
+const ProductCard = ({
+  product,
+  onAddToCart,
+}: {
+  product: Product;
+  onAddToCart?: () => void;
+}) => {
   return (
     <div className="">
       <Card className="">
@@ -21,6 +28,21 @@ const ProductCard = ({ product }: { product: Product }) => {
         </CardContent>
         <CardFooter>
           <CardDescription>{product.price}</CardDescription>
+          {onAddToCart && (
+            <div>
+              <a href="#">
+                <Button variant={"destructive"} onClick={onAddToCart}>
+                  Ajouter au panier
+                </Button>
+              </a>
+              <button
+                className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700"
+                onClick={onAddToCart}
+              >
+                Ajouter au panier
+              </button>
+            </div>
+          )}
         </CardFooter>
       </Card>
     </div>
