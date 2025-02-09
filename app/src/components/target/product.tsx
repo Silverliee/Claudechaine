@@ -9,13 +9,14 @@ import {
   CardHeader,
   CardTitle,
 } from "../shadcn/card";
+import PaymentComponent from "./paymentComponent";
 
 const ProductCard = ({
   product,
-  onAddToCart,
+  isDetailPage,
 }: {
   product: Product;
-  onAddToCart?: () => void;
+  isDetailPage?: boolean;
 }) => {
   return (
     <div className="">
@@ -28,15 +29,9 @@ const ProductCard = ({
           <img src={product.image} alt={product.name} />
         </CardContent>
         <CardFooter>
-          <CardDescription>{product.price}</CardDescription>
-          {onAddToCart && (
+          {isDetailPage && (
             <div>
-              <a href="#">
-                {/* <Button variant={"destructive"} onClick={onAddToCart}>
-                  Ajouter au panier
-                </Button> */}
-                {/* <PayButtonComponent product={product} /> */}
-              </a>
+              <PaymentComponent product={product} />
             </div>
           )}
         </CardFooter>

@@ -1,7 +1,7 @@
 "use client";
 
 import { getProductByUUID } from "@/data/base/products";
-import { Product } from "@/types/Products";
+import { Product } from "@/types/base/Products";
 import { useEffect, useState } from "react";
 
 const useProductByUUID = (uuid: string) => {

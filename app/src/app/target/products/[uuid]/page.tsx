@@ -13,7 +13,13 @@ export default function Page({
   const product = useProductByUUID(resolvedParams.uuid);
   return (
     <div>
-      {product && <ProductCard key={resolvedParams.uuid} product={product} />}
+      {product && (
+        <ProductCard
+          key={resolvedParams.uuid}
+          product={product}
+          isDetailPage={true}
+        />
+      )}
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { Product } from "@/types/Products";
+import { Product } from "@/types/base/Products";
 import { PurchaseType } from "@/types/base/PurchaseTypeEnum";
 
 const productsData: Product[] = [
@@ -7,15 +7,14 @@ const productsData: Product[] = [
     name: "Laptop",
     price: 200,
     image:
-      "https://sf1.telestar.fr/wp-content/uploads/telestarv2/2023/01/Jean-Claude-Van-Damme-dans-un-remake-de-Kickboxer-un-film-avec-JCVD.jpg",
+      "https://media.ldlc.com/r1600/ld/products/00/06/08/97/LD0006089787_0006100943.jpg",
     purchaseType: PurchaseType.Electronics,
   },
   {
     id: "0b37fcdf-7717-4ac6-b326-1fd318d3ed31",
     name: "Smartphone",
     price: 100,
-    image:
-      "https://sf1.telestar.fr/wp-content/uploads/telestarv2/2023/01/Jean-Claude-Van-Damme-dans-un-remake-de-Kickboxer-un-film-avec-JCVD.jpg",
+    image: "https://m.media-amazon.com/images/I/61aiFCe6PpL.jpg",
     purchaseType: PurchaseType.Electronics,
   },
   {
@@ -23,7 +22,7 @@ const productsData: Product[] = [
     name: "t-shirt",
     price: 100,
     image:
-      "https://sf1.telestar.fr/wp-content/uploads/telestarv2/2023/01/Jean-Claude-Van-Damme-dans-un-remake-de-Kickboxer-un-film-avec-JCVD.jpg",
+      "https://www.celio.com/dw/image/v2/BGBR_PRD/on/demandware.static/-/Sites-celio-master/default/dwc9f30fc0/hi-res/174681-572-LLEHXH_GREEN-WEB3-1.jpg",
     purchaseType: PurchaseType.Clothes,
   },
   {
@@ -31,7 +30,7 @@ const productsData: Product[] = [
     name: "pants",
     price: 100,
     image:
-      "https://sf1.telestar.fr/wp-content/uploads/telestarv2/2023/01/Jean-Claude-Van-Damme-dans-un-remake-de-Kickboxer-un-film-avec-JCVD.jpg",
+      "https://www.molinel.com/14994/pantalon-chino-homme-authentique-beige.jpg",
     purchaseType: PurchaseType.Clothes,
   },
 ];

@@ -6,7 +6,7 @@ import { abi } from "@/data/abi";
 import { toast } from "@/hooks/shadcn/use-toast";
 import useFetchReadContract from "@/hooks/base/useFetchReadContract";
 import { Button } from "../shadcn/button";
-import { Product } from "@/types/Products";
+import { Product } from "@/types/base/Products";
 import { PurchaseType } from "@/types/base/PurchaseTypeEnum";
 
 const PayButtonComponent = ({ product }: { product: Product }) => {

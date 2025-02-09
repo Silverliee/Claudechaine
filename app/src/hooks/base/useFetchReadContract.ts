@@ -14,7 +14,7 @@ const useFetchReadContract = (
   purchaseType: number
 ) => {
   const account = useAccount();
-  const [prevReturnValue, setPrevReturnValue] = useState<number | undefined>(0); // Track the previous returnValue
+  const [prevReturnValue, setPrevReturnValue] = useState<number | undefined>(0);
 
   const {
     isLoading: isConfirming,
@@ -52,10 +52,7 @@ const useFetchReadContract = (
   //TODO : debug pourquoi la première transaction faite génère deux toaster
   useEffect(() => {
     if (isConfirmed && returnValue !== prevReturnValue) {
-      if (typeof returnValue !== "number") {
-        throw Error();
-      }
-      setPrevReturnValue(returnValue);
+      setPrevReturnValue(Number(returnValue));
       toast({
         title: "Transaction",
         description: `Vous avez maintenant ${returnValue} token`,

@@ -25,12 +25,6 @@ const HeaderComponent = () => {
           >
             Products
           </Link>
-          <Link
-            href={{ pathname: "/target/" }}
-            className="hover:underline hover:underline-offset-4"
-          >
-            Balance
-          </Link>
         </nav>
         <div className="flex items-center gap-4">
           <Link href={"/base"}>
