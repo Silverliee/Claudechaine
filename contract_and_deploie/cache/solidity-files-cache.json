@@ -1,9 +1,9 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/home/dwillemain/ESGI/5AL/Blockchain/Projet/Claudechaine/contract_and_deploie/contracts/LoyaltyPointsERC1155.sol": {
-      "lastModificationDate": 1738330783471,
-      "contentHash": "ea2a440d57a2fc5d242ba51dbf1a8683",
+    "C:\\ecole\\Claudechaine\\contract_and_deploie\\contracts\\LoyaltyPointsERC1155.sol": {
+      "lastModificationDate": 1739133897857,
+      "contentHash": "d6a31b85f27309aab96d911ed61eb921",
       "sourceName": "contracts/LoyaltyPointsERC1155.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -30,6 +30,7 @@
         }
       },
       "imports": [
+        "./TransactionManager.sol",
         "@openzeppelin/contracts/token/ERC1155/ERC1155.sol",
         "@openzeppelin/contracts/access/Ownable.sol",
         "@openzeppelin/contracts/utils/Strings.sol"
@@ -41,9 +42,9 @@
         "LoyaltyPointsERC1155"
       ]
     },
-    "/home/dwillemain/ESGI/5AL/Blockchain/Projet/Claudechaine/contract_and_deploie/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
-      "lastModificationDate": 1738230411613,
-      "contentHash": "d3c790edc9ccf808a17c5a6cd13614fd",
+    "C:\\ecole\\Claudechaine\\contract_and_deploie\\node_modules\\@openzeppelin\\contracts\\access\\Ownable.sol": {
+      "lastModificationDate": 1739056528282,
+      "contentHash": "f665fc4a91af3170f86727fc49cc091f",
       "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -79,9 +80,9 @@
         "Ownable"
       ]
     },
-    "/home/dwillemain/ESGI/5AL/Blockchain/Projet/Claudechaine/contract_and_deploie/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
-      "lastModificationDate": 1738230411640,
-      "contentHash": "a55fef2557b35bac18a1880d3c2e6740",
+    "C:\\ecole\\Claudechaine\\contract_and_deploie\\node_modules\\@openzeppelin\\contracts\\utils\\Strings.sol": {
+      "lastModificationDate": 1739056528607,
+      "contentHash": "db02382db2ea8506ff2a8d8c6b49193c",
       "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -119,9 +120,9 @@
         "Strings"
       ]
     },
-    "/home/dwillemain/ESGI/5AL/Blockchain/Projet/Claudechaine/contract_and_deploie/node_modules/@openzeppelin/contracts/token/ERC1155/ERC1155.sol": {
-      "lastModificationDate": 1738230411482,
-      "contentHash": "7c7e5fac496b72e79ede7720a44a887c",
+    "C:\\ecole\\Claudechaine\\contract_and_deploie\\node_modules\\@openzeppelin\\contracts\\token\\ERC1155\\ERC1155.sol": {
+      "lastModificationDate": 1739056528541,
+      "contentHash": "aacb4eeb68e2c576b67140fc02b6ecf8",
       "sourceName": "@openzeppelin/contracts/token/ERC1155/ERC1155.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -163,9 +164,9 @@
         "ERC1155"
       ]
     },
-    "/home/dwillemain/ESGI/5AL/Blockchain/Projet/Claudechaine/contract_and_deploie/node_modules/@openzeppelin/contracts/utils/Context.sol": {
-      "lastModificationDate": 1738230411419,
-      "contentHash": "67bfbc07588eb8683b3fd8f6f909563e",
+    "C:\\ecole\\Claudechaine\\contract_and_deploie\\node_modules\\@openzeppelin\\contracts\\utils\\Context.sol": {
+      "lastModificationDate": 1739056528593,
+      "contentHash": "2783b901218e982baedae531a748ed8d",
       "sourceName": "@openzeppelin/contracts/utils/Context.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -199,9 +200,9 @@
         "Context"
       ]
     },
-    "/home/dwillemain/ESGI/5AL/Blockchain/Projet/Claudechaine/contract_and_deploie/node_modules/@openzeppelin/contracts/utils/math/Math.sol": {
-      "lastModificationDate": 1738230411606,
-      "contentHash": "2b2665ae9bdb1af440658741a77fe213",
+    "C:\\ecole\\Claudechaine\\contract_and_deploie\\node_modules\\@openzeppelin\\contracts\\utils\\math\\Math.sol": {
+      "lastModificationDate": 1739056528622,
+      "contentHash": "0b34c366bc65a520a1276268b7843013",
       "sourceName": "@openzeppelin/contracts/utils/math/Math.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -238,9 +239,9 @@
         "Math"
       ]
     },
-    "/home/dwillemain/ESGI/5AL/Blockchain/Projet/Claudechaine/contract_and_deploie/node_modules/@openzeppelin/contracts/utils/math/SignedMath.sol": {
-      "lastModificationDate": 1738230411635,
-      "contentHash": "ae3528afb8bdb0a7dcfba5b115ee8074",
+    "C:\\ecole\\Claudechaine\\contract_and_deploie\\node_modules\\@openzeppelin\\contracts\\utils\\math\\SignedMath.sol": {
+      "lastModificationDate": 1739056528624,
+      "contentHash": "e5a40b88593f114ca4606065b530c54d",
       "sourceName": "@openzeppelin/contracts/utils/math/SignedMath.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -276,9 +277,9 @@
         "SignedMath"
       ]
     },
-    "/home/dwillemain/ESGI/5AL/Blockchain/Projet/Claudechaine/contract_and_deploie/node_modules/@openzeppelin/contracts/utils/math/SafeCast.sol": {
-      "lastModificationDate": 1738230411630,
-      "contentHash": "2adca1150f58fc6f3d1f0a0f22ee7cca",
+    "C:\\ecole\\Claudechaine\\contract_and_deploie\\node_modules\\@openzeppelin\\contracts\\utils\\math\\SafeCast.sol": {
+      "lastModificationDate": 1739056528623,
+      "contentHash": "07fca9817b35d0302b609d5bf32aac50",
       "sourceName": "@openzeppelin/contracts/utils/math/SafeCast.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -312,9 +313,9 @@
         "SafeCast"
       ]
     },
-    "/home/dwillemain/ESGI/5AL/Blockchain/Projet/Claudechaine/contract_and_deploie/node_modules/@openzeppelin/contracts/utils/Panic.sol": {
-      "lastModificationDate": 1738230411620,
-      "contentHash": "2133dc13536b4a6a98131e431fac59e1",
+    "C:\\ecole\\Claudechaine\\contract_and_deploie\\node_modules\\@openzeppelin\\contracts\\utils\\Panic.sol": {
+      "lastModificationDate": 1739056528600,
+      "contentHash": "d48fd42f5fe53f9221e19b61f6b64cac",
       "sourceName": "@openzeppelin/contracts/utils/Panic.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -348,9 +349,47 @@
         "Panic"
       ]
     },
-    "/home/dwillemain/ESGI/5AL/Blockchain/Projet/Claudechaine/contract_and_deploie/node_modules/@openzeppelin/contracts/utils/Arrays.sol": {
-      "lastModificationDate": 1738230411366,
-      "contentHash": "d7ecd50ca59f27485f37e919aeb0392a",
+    "C:\\ecole\\Claudechaine\\contract_and_deploie\\node_modules\\@openzeppelin\\contracts\\interfaces\\draft-IERC6093.sol": {
+      "lastModificationDate": 1739056528521,
+      "contentHash": "1d1602f392ece4ad9d8619d8330cf62a",
+      "sourceName": "@openzeppelin/contracts/interfaces/draft-IERC6093.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC1155Errors",
+        "IERC20Errors",
+        "IERC721Errors"
+      ]
+    },
+    "C:\\ecole\\Claudechaine\\contract_and_deploie\\node_modules\\@openzeppelin\\contracts\\utils\\Arrays.sol": {
+      "lastModificationDate": 1739056528588,
+      "contentHash": "c69a2d810d20a054024182c18f877d9c",
       "sourceName": "@openzeppelin/contracts/utils/Arrays.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -389,47 +428,9 @@
         "Arrays"
       ]
     },
-    "/home/dwillemain/ESGI/5AL/Blockchain/Projet/Claudechaine/contract_and_deploie/node_modules/@openzeppelin/contracts/interfaces/draft-IERC6093.sol": {
-      "lastModificationDate": 1738230411455,
-      "contentHash": "267d92fe4de67b1bdb3302c08f387dbf",
-      "sourceName": "@openzeppelin/contracts/interfaces/draft-IERC6093.sol",
-      "solcConfig": {
-        "version": "0.8.28",
-        "settings": {
-          "evmVersion": "paris",
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "IERC1155Errors",
-        "IERC20Errors",
-        "IERC721Errors"
-      ]
-    },
-    "/home/dwillemain/ESGI/5AL/Blockchain/Projet/Claudechaine/contract_and_deploie/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
-      "lastModificationDate": 1738230411500,
-      "contentHash": "7c03c1e37c3dc24eafb76dc2b8a5c3a6",
+    "C:\\ecole\\Claudechaine\\contract_and_deploie\\node_modules\\@openzeppelin\\contracts\\utils\\introspection\\ERC165.sol": {
+      "lastModificationDate": 1739056528619,
+      "contentHash": "8f7e55ae7fa026ddd6dd2b9745fac576",
       "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -465,9 +466,9 @@
         "ERC165"
       ]
     },
-    "/home/dwillemain/ESGI/5AL/Blockchain/Projet/Claudechaine/contract_and_deploie/node_modules/@openzeppelin/contracts/token/ERC1155/IERC1155.sol": {
-      "lastModificationDate": 1738230411570,
-      "contentHash": "1c608119423d96df908c14227957bd75",
+    "C:\\ecole\\Claudechaine\\contract_and_deploie\\node_modules\\@openzeppelin\\contracts\\token\\ERC1155\\IERC1155.sol": {
+      "lastModificationDate": 1739056528541,
+      "contentHash": "d61b0aba781e5e73cd753f2c141caed4",
       "sourceName": "@openzeppelin/contracts/token/ERC1155/IERC1155.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -503,47 +504,9 @@
         "IERC1155"
       ]
     },
-    "/home/dwillemain/ESGI/5AL/Blockchain/Projet/Claudechaine/contract_and_deploie/node_modules/@openzeppelin/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol": {
-      "lastModificationDate": 1738230411571,
-      "contentHash": "f8867afd172ace7ffa75d3752d785770",
-      "sourceName": "@openzeppelin/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol",
-      "solcConfig": {
-        "version": "0.8.28",
-        "settings": {
-          "evmVersion": "paris",
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../IERC1155.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "IERC1155MetadataURI"
-      ]
-    },
-    "/home/dwillemain/ESGI/5AL/Blockchain/Projet/Claudechaine/contract_and_deploie/node_modules/@openzeppelin/contracts/token/ERC1155/utils/ERC1155Utils.sol": {
-      "lastModificationDate": 1738230411493,
-      "contentHash": "346f1d25727e87df31335bbbc03a6c20",
+    "C:\\ecole\\Claudechaine\\contract_and_deploie\\node_modules\\@openzeppelin\\contracts\\token\\ERC1155\\utils\\ERC1155Utils.sol": {
+      "lastModificationDate": 1739056528552,
+      "contentHash": "825f6c5af10421a09e4303e1ebe828f4",
       "sourceName": "@openzeppelin/contracts/token/ERC1155/utils/ERC1155Utils.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -580,9 +543,47 @@
         "ERC1155Utils"
       ]
     },
-    "/home/dwillemain/ESGI/5AL/Blockchain/Projet/Claudechaine/contract_and_deploie/node_modules/@openzeppelin/contracts/utils/Comparators.sol": {
-      "lastModificationDate": 1738230411418,
-      "contentHash": "0e57405a6f979853cbfeb0df3546c3a3",
+    "C:\\ecole\\Claudechaine\\contract_and_deploie\\node_modules\\@openzeppelin\\contracts\\token\\ERC1155\\extensions\\IERC1155MetadataURI.sol": {
+      "lastModificationDate": 1739056528549,
+      "contentHash": "a4b9a50bcff0d1af80aef8f3bb3e6426",
+      "sourceName": "@openzeppelin/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC1155.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC1155MetadataURI"
+      ]
+    },
+    "C:\\ecole\\Claudechaine\\contract_and_deploie\\node_modules\\@openzeppelin\\contracts\\utils\\Comparators.sol": {
+      "lastModificationDate": 1739056528593,
+      "contentHash": "c33186d434f71d32afac8a1b8a755e06",
       "sourceName": "@openzeppelin/contracts/utils/Comparators.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -616,45 +617,9 @@
         "Comparators"
       ]
     },
-    "/home/dwillemain/ESGI/5AL/Blockchain/Projet/Claudechaine/contract_and_deploie/node_modules/@openzeppelin/contracts/utils/SlotDerivation.sol": {
-      "lastModificationDate": 1738230411636,
-      "contentHash": "b1b4d2a2542c75ed7ce12036009f3617",
-      "sourceName": "@openzeppelin/contracts/utils/SlotDerivation.sol",
-      "solcConfig": {
-        "version": "0.8.28",
-        "settings": {
-          "evmVersion": "paris",
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "SlotDerivation"
-      ]
-    },
-    "/home/dwillemain/ESGI/5AL/Blockchain/Projet/Claudechaine/contract_and_deploie/node_modules/@openzeppelin/contracts/utils/StorageSlot.sol": {
-      "lastModificationDate": 1738230411638,
-      "contentHash": "e656d64c4ce918f3d13030b91c935134",
+    "C:\\ecole\\Claudechaine\\contract_and_deploie\\node_modules\\@openzeppelin\\contracts\\utils\\StorageSlot.sol": {
+      "lastModificationDate": 1739056528606,
+      "contentHash": "c6edb541dfe1cc6e1604dae14d0c57aa",
       "sourceName": "@openzeppelin/contracts/utils/StorageSlot.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -688,9 +653,45 @@
         "StorageSlot"
       ]
     },
-    "/home/dwillemain/ESGI/5AL/Blockchain/Projet/Claudechaine/contract_and_deploie/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
-      "lastModificationDate": 1738230411577,
-      "contentHash": "bf0119eb2a570f219729ff38b6cd1df8",
+    "C:\\ecole\\Claudechaine\\contract_and_deploie\\node_modules\\@openzeppelin\\contracts\\utils\\SlotDerivation.sol": {
+      "lastModificationDate": 1739056528605,
+      "contentHash": "487d8abe9b814859cf23d1ca9661b380",
+      "sourceName": "@openzeppelin/contracts/utils/SlotDerivation.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SlotDerivation"
+      ]
+    },
+    "C:\\ecole\\Claudechaine\\contract_and_deploie\\node_modules\\@openzeppelin\\contracts\\utils\\introspection\\IERC165.sol": {
+      "lastModificationDate": 1739056528620,
+      "contentHash": "59a728766392f0361ed197277180ec8d",
       "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -724,9 +725,9 @@
         "IERC165"
       ]
     },
-    "/home/dwillemain/ESGI/5AL/Blockchain/Projet/Claudechaine/contract_and_deploie/node_modules/@openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol": {
-      "lastModificationDate": 1738230411573,
-      "contentHash": "a1c249dfb5f349be0b4fc85e635dfd59",
+    "C:\\ecole\\Claudechaine\\contract_and_deploie\\node_modules\\@openzeppelin\\contracts\\token\\ERC1155\\IERC1155Receiver.sol": {
+      "lastModificationDate": 1739056528542,
+      "contentHash": "e1f3327d3140cae2e65c52123d42907e",
       "sourceName": "@openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -762,9 +763,9 @@
         "IERC1155Receiver"
       ]
     },
-    "/home/dwillemain/ESGI/5AL/Blockchain/Projet/Claudechaine/contract_and_deploie/contracts/TokenVerifier.sol": {
-      "lastModificationDate": 1738330806430,
-      "contentHash": "7cf8413a690e7a3250dff5179ff5903e",
+    "C:\\ecole\\Claudechaine\\contract_and_deploie\\contracts\\TokenVerifier.sol": {
+      "lastModificationDate": 1739120318585,
+      "contentHash": "3f356ba7ae21b44cb2a79d9d10d2f086",
       "sourceName": "contracts/TokenVerifier.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -801,9 +802,9 @@
         "TokenVerifier"
       ]
     },
-    "/home/dwillemain/ESGI/5AL/Blockchain/Projet/Claudechaine/contract_and_deploie/node_modules/@openzeppelin/contracts/token/ERC1155/utils/ERC1155Holder.sol": {
-      "lastModificationDate": 1738230411489,
-      "contentHash": "2d5c4c9aa5ff17fc77d595a1915d9d4e",
+    "C:\\ecole\\Claudechaine\\contract_and_deploie\\node_modules\\@openzeppelin\\contracts\\token\\ERC1155\\utils\\ERC1155Holder.sol": {
+      "lastModificationDate": 1739056528551,
+      "contentHash": "ae8747c574578e428429948943f13794",
       "sourceName": "@openzeppelin/contracts/token/ERC1155/utils/ERC1155Holder.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -838,6 +839,42 @@
       ],
       "artifacts": [
         "ERC1155Holder"
+      ]
+    },
+    "C:\\ecole\\Claudechaine\\contract_and_deploie\\contracts\\TransactionManager.sol": {
+      "lastModificationDate": 1739133485142,
+      "contentHash": "d4a313cbca4979bb24ab5657f5363caa",
+      "sourceName": "contracts/TransactionManager.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.10"
+      ],
+      "artifacts": [
+        "TransactionManager"
       ]
     }
   }
