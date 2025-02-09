@@ -1,10 +1,8 @@
+import HomeComponent from "@/components/base/homeComponent";
 import React from "react";
-function App() {
-  return (
-    <div>
-      <h1>Home</h1>
-    </div>
-  );
+
+function Page() {
+    return <HomeComponent />;
 }
 
-export default App;
+export default Page;
