@@ -20,19 +20,22 @@ const HeaderComponent = () => {
             Home
           </Link>
           <Link
-            href={{ pathname: "/base/products" }}
+            href={{ pathname: "/base/products/" }}
             className="hover:underline hover:underline-offset-4"
           >
             Products
           </Link>
           <Link
-            href="/base/balance"
+            href={{ pathname: "/base/balance/" }}
             className="hover:underline hover:underline-offset-4"
           >
             Balance
           </Link>
         </nav>
         <div className="flex items-center gap-4">
+          <Link href={"/target"}>
+            <Button>Changer de site</Button>
+          </Link>
           {account.status === "disconnected" &&
             connectors.map((connector) => (
               <Button
@@ -53,7 +56,6 @@ const HeaderComponent = () => {
               Déconnexion
             </Button>
           )}
-          <Button>Changer de site</Button>
         </div>
       </div>
     </header>

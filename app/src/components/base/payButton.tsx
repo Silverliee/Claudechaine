@@ -4,10 +4,10 @@ import React from "react";
 import { useAccount, useWriteContract } from "wagmi";
 import { abi } from "@/data/abi";
 import { toast } from "@/hooks/shadcn/use-toast";
-import useFetchReadContract from "@/hooks/useFetchReadContract";
+import useFetchReadContract from "@/hooks/base/useFetchReadContract";
 import { Button } from "../shadcn/button";
 import { Product } from "@/types/Products";
-import { PurchaseType } from "@/types/PurchaseTypeEnum";
+import { PurchaseType } from "@/types/base/PurchaseTypeEnum";
 
 const PayButtonComponent = ({ product }: { product: Product }) => {
   const account = useAccount();

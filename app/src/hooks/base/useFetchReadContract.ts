@@ -1,13 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { toast } from "./shadcn/use-toast";
 import { abi } from "@/data/abi";
 import {
   useAccount,
   useReadContract,
   useWaitForTransactionReceipt,
 } from "wagmi";
+import { toast } from "../shadcn/use-toast";
 
 const useFetchReadContract = (
   hash: `0x${string}` | undefined,
@@ -52,7 +52,10 @@ const useFetchReadContract = (
   //TODO : debug pourquoi la première transaction faite génère deux toaster
   useEffect(() => {
     if (isConfirmed && returnValue !== prevReturnValue) {
-      setPrevReturnValue(returnValue); // Update the previous returnValue
+      if (typeof returnValue !== "number") {
+        throw Error();
+      }
+      setPrevReturnValue(returnValue);
       toast({
         title: "Transaction",
         description: `Vous avez maintenant ${returnValue} token`,

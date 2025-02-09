@@ -1,6 +1,6 @@
 "use client";
 
-import { getProductByUUID } from "@/data/products";
+import { getProductByUUID } from "@/data/base/products";
 import { Product } from "@/types/Products";
 import { useEffect, useState } from "react";
 

@@ -1,7 +1,6 @@
-import { Product } from "@/types/Products";
+import { Product } from "@/types/target/Products";
 import React from "react";
 
-import PayButtonComponent from "./base/payButton";
 import {
   Card,
   CardContent,
@@ -9,7 +8,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "./shadcn/card";
+} from "../shadcn/card";
 
 const ProductCard = ({
   product,
@@ -36,7 +35,7 @@ const ProductCard = ({
                 {/* <Button variant={"destructive"} onClick={onAddToCart}>
                   Ajouter au panier
                 </Button> */}
-                <PayButtonComponent product={product} />
+                {/* <PayButtonComponent product={product} /> */}
               </a>
             </div>
           )}

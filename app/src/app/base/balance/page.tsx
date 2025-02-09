@@ -1,7 +1,7 @@
 //import { useAccount, useReadContract } from "wagmi";
 import React from "react";
-import { getAllPurchaseTypeKeys } from "@/types/PurchaseTypeEnum";
-import BalanceComponent from "@/components/balance";
+import { getAllPurchaseTypeKeys } from "@/types/base/PurchaseTypeEnum";
+import BalanceComponent from "@/components/base/balance";
 
 export default function Page() {
   const purchaseTypes = getAllPurchaseTypeKeys();

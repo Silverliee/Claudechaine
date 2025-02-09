@@ -1,5 +1,5 @@
 import { Product } from "@/types/Products";
-import { PurchaseType } from "@/types/PurchaseTypeEnum";
+import { PurchaseType } from "@/types/base/PurchaseTypeEnum";
 
 const productsData: Product[] = [
   {

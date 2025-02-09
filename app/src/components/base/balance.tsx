@@ -7,9 +7,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "./shadcn/card";
-import { getValuesFromKey } from "@/types/PurchaseTypeEnum";
-import useBalanceOfHook from "@/hooks/useBalanceOfHook";
+} from "../shadcn/card";
+import { getValuesFromKey } from "@/types/base/PurchaseTypeEnum";
+import useBalanceOfHook from "@/hooks/base/useBalanceOfHook";
 
 const BalanceComponent = ({ purchaseKey }: { purchaseKey: string }) => {
   const value = getValuesFromKey(purchaseKey);

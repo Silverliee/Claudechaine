@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import useProductByUUID from "@/hooks/base/useProductById";
+import useProductByUUID from "@/hooks/target/useProductById";
 import { use } from "react";
-import ProductCard from "@/components/base/product";
+import ProductCard from "@/components/target/product";
 
 export default function Page({
   params,
@@ -13,13 +13,7 @@ export default function Page({
   const product = useProductByUUID(resolvedParams.uuid);
   return (
     <div>
-      {product && (
-        <ProductCard
-          key={resolvedParams.uuid}
-          product={product}
-          isBtnAddToCart={true}
-        />
-      )}
+      {product && <ProductCard key={resolvedParams.uuid} product={product} />}
     </div>
   );
 }

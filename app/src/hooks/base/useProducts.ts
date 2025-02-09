@@ -1,6 +1,6 @@
 "use client";
 
-import { productsData } from "@/data/products";
+import { productsData } from "@/data/base/products";
 import { Product } from "@/types/Products";
 import { useState, useEffect } from "react";
 
