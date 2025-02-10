@@ -9,6 +9,7 @@ import { Transaction } from '@/types/base/Transaction';
 const TransactionHistoryComponent = () => {
     const account = useAccount();
     const [transactions, setTransactions] = useState<Transaction[]>([]);
+    const  contractAddress = process.env.NEXT_PUBLIC_LOYALTY_CONTRACT_ADDRESS;
 
     const {
         data: events,
@@ -16,7 +17,7 @@ const TransactionHistoryComponent = () => {
         isLoading,
     } = useReadContract({
         abi,
-        address: "0xaBd3E00d04dfa5d7b47eF7E3d5ecFB4e10AE97a9",
+        address: contractAddress!,
         functionName: "getTransactionHistory",
         args: [account.address],
     });

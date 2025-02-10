@@ -23,6 +23,7 @@ const PaymentComponent = ({ product }: { product: Product }) => {
   const [reduction, setReduction] = useState<number>(0);
   const [finalPrice, setFinalPrice] = useState(product.price);
   const total = useBalanceOfHook(product.purchaseType);
+  const  contractAddress = process.env.NEXT_PUBLIC_VERIFY_TOKEN_CONTRACT_ADDRESS;
 
   const { data: hash, writeContract, isPending } = useWriteContract();
 
@@ -44,7 +45,7 @@ const PaymentComponent = ({ product }: { product: Product }) => {
     try {
       writeContract({
         abi,
-        address: "0xd66D3232eE219571F427881a4a133F77D6f15d16",
+        address: contractAddress!,
         functionName: "useToken",
         args: [
           product.purchaseType,

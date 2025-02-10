@@ -8,6 +8,7 @@ import { useAccount, useReadContract } from "wagmi";
 const useTransactionHistory = () => {
     const account = useAccount();
     const [transactions, setTransactions] = useState<Transaction[] | null>(null);
+    const  contractAddress = process.env.NEXT_PUBLIC_LOYALTY_CONTRACT_ADDRESS;
 
     const {
         data,
@@ -15,7 +16,7 @@ const useTransactionHistory = () => {
         isLoading,
     } = useReadContract({
         abi,
-        address: "0xF83d426f72BAD83dF811b839AaA938C7e9363884",
+        address: contractAddress!,
         functionName: "getTransactionHistory",
         args: [account.address]
     });

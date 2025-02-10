@@ -26,6 +26,7 @@ const PayButtonComponent: React.FC<PayButtonProps> = ({
 
     const {data: hash, writeContract} = useWriteContract();
     useFetchReadContract(hash, product.purchaseType);
+    const  contractAddress = process.env.NEXT_PUBLIC_LOYALTY_CONTRACT_ADDRESS;
 
     const handlePayment = async () => {
         if (!account.address) {
@@ -40,7 +41,7 @@ const PayButtonComponent: React.FC<PayButtonProps> = ({
         try {
             writeContract({
                 abi,
-                address: "0xF83d426f72BAD83dF811b839AaA938C7e9363884",
+                address: contractAddress!,
                 functionName: "saveLoyaltyPoints",
                 args: [
                     account.address,

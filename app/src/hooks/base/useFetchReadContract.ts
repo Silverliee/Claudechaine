@@ -15,6 +15,7 @@ const useFetchReadContract = (
 ) => {
   const account = useAccount();
   const [prevReturnValue, setPrevReturnValue] = useState<number | undefined>(0);
+  const  contractAddress = process.env.NEXT_PUBLIC_LOYALTY_CONTRACT_ADDRESS;
 
   const {
     isLoading: isConfirming,
@@ -26,7 +27,7 @@ const useFetchReadContract = (
   });
   const { data: returnValue, refetch } = useReadContract({
     abi,
-    address: "0x49e812ACc64dA4052e2fbE9b087C160dAe18e37d",
+    address: contractAddress!,
     functionName: "balanceOf",
     args: [account.address, purchaseType],
   });
