@@ -4,6 +4,7 @@ async function main() {
 		"LoyaltyPointsERC1155"
 	);
 	const TransactionManager = await ethers.getContractFactory("TransactionManager");
+	const Indexor = await ethers.getContractFactory("Indexor");
 	const TokenVerifier = await ethers.getContractFactory("TokenVerifier");
 
 	//no argument in the contract constructor, so nothing to provide in deploy()
@@ -22,6 +23,12 @@ async function main() {
 	console.log(
 		"Contract TokenVerifier Deployed to Address:",
 		tokenVerifier.address
+	);
+
+	const indexor = await Indexor.deploy();
+	console.log(
+		"Contract indexor Deployed to Address:",
+		indexor.address
 	);
 }
 main()

@@ -1,0 +1,38 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Indexor
+    network: sepolia
+    source:
+      address: "0x3B984A61BBeD2a3eE33360771f528d753FBE881b"
+      abi: Indexor
+      startBlock: 7679717
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - LoyaltyPointsSaved
+        - OwnershipTransferred
+        - TokenMinted
+        - TokenUsed
+        - UserRegistered
+      abis:
+        - name: Indexor
+          file: ./abis/Indexor.json
+      eventHandlers:
+        - event: LoyaltyPointsSaved(indexed address,uint256,string,uint256)
+          handler: handleLoyaltyPointsSaved
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: TokenMinted(indexed address,uint256,uint256,uint256)
+          handler: handleTokenMinted
+        - event: TokenUsed(indexed address,uint256,uint256,uint256)
+          handler: handleTokenUsed
+        - event: UserRegistered(indexed address,uint256)
+          handler: handleUserRegistered
+      file: ./src/indexor.ts

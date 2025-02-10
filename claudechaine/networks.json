@@ -1,0 +1,8 @@
+{
+  "sepolia": {
+    "Indexor": {
+      "address": "0x3B984A61BBeD2a3eE33360771f528d753FBE881b",
+      "startBlock": 7679717
+    }
+  }
+}

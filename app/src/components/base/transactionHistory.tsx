@@ -17,6 +17,7 @@ const TransactionHistoryComponent = () => {
         isLoading,
     } = useReadContract({
         abi,
+        // @ts-ignore
         address: contractAddress!,
         functionName: "getTransactionHistory",
         args: [account.address],
