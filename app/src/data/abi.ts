@@ -1,4 +1,25 @@
 export const abi = [
+    // Événements
+    {
+        type: "event",
+        name: "TransactionSaved",
+        inputs: [
+            { indexed: true, name: "user", type: "address" },
+            { indexed: false, name: "transactionType", type: "string" },
+            { indexed: false, name: "amount", type: "uint256" },
+            { indexed: false, name: "purchaseType", type: "string" }
+        ]
+    },
+    {
+        type: "event",
+        name: "LoyaltyPointsSaved",
+        inputs: [
+            { indexed: true, name: "user", type: "address" },
+            { indexed: false, name: "amount", type: "uint256" },
+            { indexed: false, name: "purchaseType", type: "string" }
+        ]
+    },
+    // Fonctions
     {
         type: "function",
         name: "saveLoyaltyPoints",
@@ -8,17 +29,17 @@ export const abi = [
             {name: "amount", type: "uint256"},
             {name: "typeOfPurchase", type: "string"},
         ],
-        outputs: [{type: "event"}],
+        outputs: []
     },
     {
         type: "function",
         name: "balanceOf",
-        stateMutability: "nonpayable",
+        stateMutability: "view",
         inputs: [
             {name: "account", type: "address"},
             {name: "id", type: "uint256"},
         ],
-        outputs: [{type: "uint256"}],
+        outputs: [{type: "uint256"}]
     },
     {
         type: "function",
@@ -29,6 +50,7 @@ export const abi = [
             {name: "amount", type: "uint256"},
             {name: "requiredType", type: "string"},
         ],
+        outputs: []
     },
     {
         type: "function",
@@ -47,6 +69,6 @@ export const abi = [
                     { name: "purchaseType", type: "string" }
                 ]
             }
-        ],
-    },
+        ]
+    }
 ] as const;

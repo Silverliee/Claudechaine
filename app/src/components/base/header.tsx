@@ -18,6 +18,7 @@ const HeaderComponent = () => {
     { name: "Products", path: "/base/products/" },
     { name: "Balance", path: "/base/balance/" },
     { name: "Historique", path: "/base/history/" },
+    { name: "Statistiques", path: "/base/stats/" },
   ];
 
   const isActivePath = (path: string) => pathname === path;

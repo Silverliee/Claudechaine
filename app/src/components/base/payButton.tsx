@@ -39,8 +39,10 @@ const PayButtonComponent: React.FC<PayButtonProps> = ({
         }
 
         try {
+
             writeContract({
                 abi,
+                // @ts-ignore
                 address: contractAddress!,
                 functionName: "saveLoyaltyPoints",
                 args: [
