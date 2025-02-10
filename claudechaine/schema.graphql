@@ -1,49 +1,43 @@
-type LoyaltyPointsSaved @entity(immutable: true) {
-  id: Bytes!
-  user: Bytes! # address
-  amount: BigInt! # uint256
-  purchaseType: String! # string
-  timestamp: BigInt! # uint256
+scalar BigInt
+scalar Bytes
+
+directive @entity on OBJECT
+
+type User @entity {
+  id: ID!
+  totalPointsEarned: BigInt!
+  totalTokensMinted: BigInt!
+  totalTokensUsed: BigInt!
+}
+
+type LoyaltyPointsSaved @entity {
+  id: ID!
+  user: User!
+  amount: BigInt!
+  purchaseType: String!
+  timestamp: BigInt!
   blockNumber: BigInt!
   blockTimestamp: BigInt!
   transactionHash: Bytes!
 }
 
-type OwnershipTransferred @entity(immutable: true) {
-  id: Bytes!
-  previousOwner: Bytes! # address
-  newOwner: Bytes! # address
+type TokenMinted @entity {
+  id: ID!
+  user: User!
+  tokenId: BigInt!
+  amount: BigInt!
+  timestamp: BigInt!
   blockNumber: BigInt!
   blockTimestamp: BigInt!
   transactionHash: Bytes!
 }
 
-type TokenMinted @entity(immutable: true) {
-  id: Bytes!
-  user: Bytes! # address
-  tokenId: BigInt! # uint256
-  amount: BigInt! # uint256
-  timestamp: BigInt! # uint256
-  blockNumber: BigInt!
-  blockTimestamp: BigInt!
-  transactionHash: Bytes!
-}
-
-type TokenUsed @entity(immutable: true) {
-  id: Bytes!
-  user: Bytes! # address
-  tokenId: BigInt! # uint256
-  amount: BigInt! # uint256
-  timestamp: BigInt! # uint256
-  blockNumber: BigInt!
-  blockTimestamp: BigInt!
-  transactionHash: Bytes!
-}
-
-type UserRegistered @entity(immutable: true) {
-  id: Bytes!
-  user: Bytes! # address
-  timestamp: BigInt! # uint256
+type TokenUsed @entity {
+  id: ID!
+  user: User!
+  tokenId: BigInt!
+  amount: BigInt!
+  timestamp: BigInt!
   blockNumber: BigInt!
   blockTimestamp: BigInt!
   transactionHash: Bytes!

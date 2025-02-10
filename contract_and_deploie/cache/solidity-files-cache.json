@@ -878,8 +878,8 @@
       ]
     },
     "C:\\Ecole\\Claudechaine\\contract_and_deploie\\contracts\\LoyaltyPointsERC1155.sol": {
-      "lastModificationDate": 1739184811134,
-      "contentHash": "d6a31b85f27309aab96d911ed61eb921",
+      "lastModificationDate": 1739195337220,
+      "contentHash": "5ddfea57437f5359b85578881f872ab6",
       "sourceName": "contracts/LoyaltyPointsERC1155.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -906,9 +906,10 @@
         }
       },
       "imports": [
+        "./Indexor.sol",
         "./TransactionManager.sol",
-        "@openzeppelin/contracts/token/ERC1155/ERC1155.sol",
         "@openzeppelin/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts/token/ERC1155/ERC1155.sol",
         "@openzeppelin/contracts/utils/Strings.sol"
       ],
       "versionPragmas": [

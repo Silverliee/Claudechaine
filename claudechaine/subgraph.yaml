@@ -8,7 +8,7 @@ dataSources:
     name: Indexor
     network: sepolia
     source:
-      address: "0x3B984A61BBeD2a3eE33360771f528d753FBE881b"
+      address: "0x58891b44895cB9857F6e6b138110f6C7Df135fa9"
       abi: Indexor
       startBlock: 7679717
     mapping:

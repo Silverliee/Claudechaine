@@ -1,89 +1,80 @@
 import { useState, useEffect } from 'react';
 
-interface LoyaltyPoint {
+interface LoyaltyPointsSaved {
     amount: bigint;
     purchaseType: string;
     timestamp: bigint;
+    blockTimestamp: bigint;
 }
 
-interface TokenTransfer {
+interface TokenEvent {
     tokenId: bigint;
     amount: bigint;
-    type: string;
     timestamp: bigint;
+    blockTimestamp: bigint;
 }
 
-interface GlobalStats {
-    totalPoints: bigint;
-    totalTokens: bigint;
-    activeUsers: bigint;
-}
-
-interface UserStats {
-    loyaltyPoints: LoyaltyPoint[];
-    tokenTransfers: TokenTransfer[];
+interface User {
+    id: string;
+    totalPointsEarned: bigint;
+    totalTokensMinted: bigint;
+    totalTokensUsed: bigint;
+    transactions: LoyaltyPointsSaved[];
+    tokenMints: TokenEvent[];
+    tokenUsages: TokenEvent[];
 }
 
 const useStatsQuery = (userAddress?: string) => {
-    const [globalStats, setGlobalStats] = useState<GlobalStats | null>(null);
-    const [userStats, setUserStats] = useState<UserStats | null>(null);
+    const [user, setUser] = useState<User | null>(null);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const fetchData = async () => {
+            if (!userAddress) {
+                setIsLoading(false);
+                return;
+            }
+
             try {
-                // Requête pour les stats globales
-                const globalQuery = `
-          {
-            statistics(id: "global") {
-              totalPoints
-              totalTokens
-              activeUsers
-            }
-          }
-        `;
+                const query = `
+         {
+           user(id: "${userAddress}") {
+             id
+             totalPointsEarned
+             totalTokensMinted
+             totalTokensUsed
+             transactions {
+               amount
+               purchaseType
+               timestamp
+               blockTimestamp
+             }
+             tokenMints {
+               tokenId
+               amount
+               timestamp
+               blockTimestamp
+             }
+             tokenUsages {
+               tokenId
+               amount
+               timestamp
+               blockTimestamp
+             }
+           }
+         }
+       `;
 
-                // Requête pour les stats utilisateur si une adresse est fournie
-                const userQuery = userAddress ? `
-          {
-            user(id: "${userAddress}") {
-              loyaltyPoints {
-                amount
-                purchaseType
-                timestamp
-              }
-              tokenTransfers {
-                tokenId
-                amount
-                type
-                timestamp
-              }
-            }
-          }
-        ` : null;
-
-                // Exécuter les requêtes
-                const globalResponse = await fetch(process.env.NEXT_PUBLIC_SUBGRAPH_URL!, {
+                const response = await fetch(process.env.NEXT_PUBLIC_SUBGRAPH_URL!, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ query: globalQuery }),
+                    body: JSON.stringify({ query }),
                 });
-                const globalData = await globalResponse.json();
 
-                setGlobalStats(globalData.data.statistics);
-
-                if (userQuery && userAddress) {
-                    const userResponse = await fetch(process.env.NEXT_PUBLIC_SUBGRAPH_URL!, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ query: userQuery }),
-                    });
-                    const userData = await userResponse.json();
-                    setUserStats(userData.data.user);
-                }
-
+                const data = await response.json();
+                setUser(data.data.user);
             } catch (error) {
-                console.error('Error fetching stats:', error);
+                console.error('Error fetching user stats:', error);
             } finally {
                 setIsLoading(false);
             }
@@ -92,7 +83,7 @@ const useStatsQuery = (userAddress?: string) => {
         fetchData();
     }, [userAddress]);
 
-    return { globalStats, userStats, isLoading };
+    return { user, isLoading };
 };
 
 export default useStatsQuery;
